@@ -41,8 +41,6 @@ class DataIngestion:
                 df=df.drop(columns=["_id"],axis=1)
             
             df.replace({"na":np.nan},inplace=True)
-            print("DEBUG: DataFrame shape =", df.shape)
-            print("DEBUG: DataFrame columns =", df.columns)
             return df
         except Exception as e:
             raise NetworkSecurityException
